@@ -42,6 +42,7 @@
 1. 采用先前的预训练数据集，以L1loss为损失函数，优化器选择adam，学习率设置为1e-3,
 2. 训练30个epochs得到Train loss/Val loss曲线如下
 ![alt text](image.png)
+
 loss收敛较慢，且模型似乎出现过拟合   
 不过在最后一epoch验证集输出SBP/DBP预测MAE满足任务精度要求。
 ## 4.模型微调
