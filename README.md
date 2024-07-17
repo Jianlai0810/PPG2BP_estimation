@@ -34,8 +34,10 @@
 1. 原始数据在125hz情况下采样得到，选取每625个ppg信号作为一个ppg_segment（5s）
 2. 采用波峰波谷检测，计算每个ppg_segment中SBP和DBP均值，写入到csv文件中。
 ## 2.模型架构
-模型架构参考论文《Personalized Blood Pressure Estimation Using Photoplethysmography: A Transfer Learning Approach》
-3层卷积 -> 残差连接 ->GRU -> 2层全连接层 -> 输出SBP/DBP
+模型架构参考论文《Personalized Blood Pressure Estimation Using Photoplethysmography: A Transfer Learning Approach》  
+
+3层卷积 -> 残差连接 ->GRU -> 2层全连接层 -> 输出SBP/DBP  
+具体架构图可在论文中找到
 ## 3.预训练
 1. 采用先前的预训练数据集，以L1loss为损失函数，优化器选择adam，学习率设置为1e-3,
 2. 训练30个epochs得到Train loss/Val loss曲线如下
